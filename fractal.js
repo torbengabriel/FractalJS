@@ -47,14 +47,18 @@ function Fractal(config) {
     this.setHeaders=function(hasPadding, header) {
         headers = document.getElementsByClassName("fractal-header");
         const randomPaddingValue = this.getRandomArbitrary(5, 8);
-        let newBackgroundColor = [];
+        newBackgroundColor = [];
         let newBackgroundColorValue = '';
 
         if(header.gradient) {
             newBackgroundColorValue= `linear-gradient(to right,
                 ${this.getRandomRGBValue()}, ${this.getRandomRGBValue()})`;
         } else if (header.gradient === undefined) {
-            if(header.backgroundColor !== undefined) {
+            if (header.backgroundColor) {
+                newBackgroundColor = this.getRandomRGBValueAsArray();
+            }
+            
+            if(header.backgroundColor !== undefined && Array.isArray(header.backgroundColor)) {
                 const firstValue = header.backgroundColor[0];
                 const secondValue = header.backgroundColor[1];
                 const thirdValue = header.backgroundColor[0];
@@ -65,9 +69,7 @@ function Fractal(config) {
                 newBackgroundColor[0] = newFirstValue > 0 ? newFirstValue : 0;
                 newBackgroundColor[1] = newSecondValue > 0 ? newSecondValue : 0;
                 newBackgroundColor[2] = newThirdValue > 0 ? newThirdValue : 0;
-            } else {
-                newBackgroundColor = this.getRandomRGBValueAsArray();
-            }
+            } 
 
             newBackgroundColorValue = `rgb(${newBackgroundColor[0]}, ${newBackgroundColor[1]}, ${newBackgroundColor[2]})`;
         }

@@ -18,19 +18,19 @@ li.minus:before {
 } 
 
 li.spade:before {
-    content: '♠'; 
+    content: '\2660'; 
 } 
 
 li.heart:before {
-    content: '♥';
+    content: '\2665';
 }
 
 li.blub:before {
-    content: '♣';
+    content: '\2663';
 }
 
 li.diamond:before {
-    content: '♦';
+    content: '\2666';
 }
 
 li.hash:before {
@@ -38,7 +38,7 @@ li.hash:before {
 } 
 
 li.star:before {
-    content: '☆'; 
+    content: '\2B50'; 
 } 
 
 li.sun:before {
