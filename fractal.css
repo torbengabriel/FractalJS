@@ -1,0 +1,90 @@
+ul.fractal-list {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  
+ul.fractal-list li {
+padding-left: 1em;
+text-indent: -1em;
+}
+
+li:before {
+    padding-right: 5px;
+}
+
+li.minus:before {
+    content: '-'; 
+} 
+
+li.spade:before {
+    content: '♠'; 
+} 
+
+li.heart:before {
+    content: '♥';
+}
+
+li.blub:before {
+    content: '♣';
+}
+
+li.diamond:before {
+    content: '♦';
+}
+
+li.hash:before {
+    content: '#'; 
+} 
+
+li.star:before {
+    content: '☆'; 
+} 
+
+li.sun:before {
+    content: "\2600";
+}
+
+li.cloud:before {
+    content: "\2601";
+}
+
+li.rain:before {
+    content: "\2602";
+}
+
+li.snow:before {
+    content: "\2603";
+}
+
+li.finger:before {
+    content: "\261B";
+}
+
+li.skull:before {
+    content: "\2620";
+}
+
+li.smile:before {
+    content: "\263A";
+}
+
+li.coffee:before {
+    content: "\2668";
+}
+
+li.baseball:before {
+    content: "\26BE";
+}
+
+li.airplane:before {
+    content: "\2708";
+}
+
+li.peace:before {
+    content: "\270C";
+}
+
+li.unicorn:before {
+    content: "\01F984";
+}
